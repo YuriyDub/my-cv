@@ -1,0 +1,49 @@
+@import "../../styles/themes.scss";
+
+.header {
+	transition: all 0.2s ease-in-out;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 2000;
+	display: flex;
+	width: 100%;
+	height: 50px;
+	justify-content: space-around;
+	align-items: center;
+	border-bottom: 1px solid;
+
+	@include themify($themes) {
+		background-color: themed("headerColor");
+		border-color: themed("lineColor");
+		color: themed("textColor");
+	}
+
+	.burger {
+		display: none;
+	}
+	.burgerList {
+		display: none;
+	}
+
+	.themeToggle {
+		align-items: center;
+		display: flex;
+		gap: 5px;
+	} 	
+
+	@media (max-width: 900px) {
+		.burger {
+			display: inline;
+		}
+		.burgerList {
+			display: block;
+		}
+		.baseNavigation {
+			display: none;
+		}
+		.themeToggle {
+			display: none;
+		}
+	}
+}

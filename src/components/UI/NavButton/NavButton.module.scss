@@ -1,0 +1,19 @@
+.navButton {
+	font-weight: 500;
+	color: white;
+
+	button {
+		height: 50px;
+		padding: 0px 20px 0px 20px;
+		background-color: white;
+		transition: all 0.05s ease-out;
+	}
+
+	.active {
+		height: 70px;
+		transform: translateY(10px) rotate(10deg) rotateX(20deg) perspective(100px);
+		filter: saturate(200%);
+		box-shadow: 0px 5px 10px #00000040;
+		z-index: 1;
+	}
+}

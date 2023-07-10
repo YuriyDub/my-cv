@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Layout } from './components/Layout';
+import { Routes, Route } from 'react-router-dom';
+import { AboutPage } from './pages/AboutPage';
+import { StackPage } from './pages/StackPage';
+import { useThemeContext } from './context/themeContext';
 
-function App() {
+import './styles/App.scss';
+
+export default function App() {
+  const { theme } = useThemeContext();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`theme-${theme}`}>
+      <div className="background">
+        <div className="wrapper">
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route path="about" element={<AboutPage />} />
+              <Route path="stack" element={<StackPage />} />
+              <Route path="experience" />
+              <Route path="projects" />
+            </Route>
+          </Routes>
+        </div>
+      </div>
     </div>
   );
 }
-
-export default App;
