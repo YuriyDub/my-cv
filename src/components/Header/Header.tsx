@@ -55,7 +55,7 @@ const Header = () => {
           </NavButton>
         </nav>
         <h3>yuriyyuriovich@gmail.com</h3>
-        <Toggle onClick={changeTheme} onActive={theme === 'dark'} />
+        <Toggle onClick={changeTheme} onActive={theme === 'dark'} className={'themeToggle'} />
       </div>
       {isBurger && <BurgerList className="burgerList" callback={() => setIsBurger((b) => !b)} />}
     </>
