@@ -1,5 +1,5 @@
 import { Layout } from './components/Layout';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { AboutPage } from './pages/AboutPage';
 import { StackPage } from './pages/StackPage';
 import { useThemeContext } from './context/themeContext';
@@ -14,7 +14,8 @@ export default function App() {
       <div className="background">
         <div className="wrapper">
           <Routes>
-            <Route path="/" element={<Layout />}>
+            <Route element={<Layout />}>
+              <Route path="/" element={<Navigate to="/about" />} />
               <Route path="about" element={<AboutPage />} />
               <Route path="stack" element={<StackPage />} />
               <Route path="experience" />
