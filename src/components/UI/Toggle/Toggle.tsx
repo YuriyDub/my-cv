@@ -21,7 +21,7 @@ export const Toggle = ({ onClick, onActive }: TogglePropsType) => {
         setIsActive((prev) => !prev);
       }}
       className={`${styles.body} ${isActive ? styles.active : ''}`}>
-      <div className={styles.toggle}></div>
+      <h3 className={styles.toggle}>{isActive ? '🌑' : '☀️'}</h3>
     </button>
   );
 };

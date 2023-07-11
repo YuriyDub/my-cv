@@ -6,6 +6,7 @@ $themes: (
 		lineColor: #0001,
 		backgroundText: #0001,
 		popupColor: #fff,
+		hoverGradient: linear-gradient(0deg, rgb(0, 0, 0, 0.203) 0%, rgba(0, 0, 0, 0.043) 40%, rgba(0, 0, 0, 0) 100%)
 	),
 	dark: (
 		headerColor: #000000,
@@ -14,7 +15,14 @@ $themes: (
 		lineColor: #6b728e,
 		backgroundText: #1c1b22,
 		popupColor: #404258,
-	),
+		hoverGradient:
+			linear-gradient(
+				0deg,
+				rgba(255, 255, 255, 0.203) 0%,
+				rgba(255, 255, 255, 0.043) 40%,
+				rgba(255, 255, 255, 0) 100%
+			)
+	)
 );
 
 @mixin themify($themes) {
@@ -26,7 +34,7 @@ $themes: (
 				$theme-map: map-merge(
 					$theme-map,
 					(
-						$key: $value,
+						$key: $value
 					)
 				) !global;
 			}

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Button } from '../UI/Button';
 import { NavButton } from '../UI/NavButton';
 import { BurgerList } from '../BurgerList';
-import { ThemeType, useThemeContext } from '../../context/themeContext';
+import { useThemeContext } from '../../context/themeContext';
 import { Toggle } from '../UI/Toggle';
 
 import './index.scss';
@@ -55,10 +55,7 @@ const Header = () => {
           </NavButton>
         </nav>
         <h3>yuriyyuriovich@gmail.com</h3>
-        <h3 className="themeToggle">
-          theme:
-          <Toggle onClick={changeTheme} onActive={theme === 'dark'} />
-        </h3>
+        <Toggle onClick={changeTheme} onActive={theme === 'dark'} />
       </div>
       {isBurger && <BurgerList className="burgerList" callback={() => setIsBurger((b) => !b)} />}
     </>
