@@ -47,11 +47,11 @@ const Header = () => {
           <NavButton to="/stack" color="#F2BE22">
             Stack
           </NavButton>
-          <NavButton to="/experience" color="#F29727">
-            Experience
-          </NavButton>
-          <NavButton to="/projects" color="#F24C3D">
+          <NavButton to="/projects" color="#F29727">
             Projects
+          </NavButton>
+          <NavButton to="/links" color="#F24C3D">
+            Links
           </NavButton>
         </nav>
         <h3>yuriyyuriovich@gmail.com</h3>
