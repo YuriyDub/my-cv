@@ -1,32 +1,26 @@
-@import "../../styles/themes";
-
 .about-page {
 	display: flex;
 	justify-content: space-between;
 	padding-top: 200px;
 
-	@include themify($themes) {
-		color: themed("textColor");
-	}
+	color: var(--colors-text);
 
 	.about {
 		margin-left: 50px;
 		margin-right: 50px;
 
 		h1 {
-			font-size: 48px;
+			font-size: var(--fs-hg);
 			z-index: 1;
 			animation-name: appear;
 			animation-duration: 0.5s;
 			border-bottom: 1px solid;
 			padding: 10px 0px;
-			@include themify($themes) {
-				border-color: themed("lineColor");
-			}
+			border-color: var(--colors-line);
 		}
 		h2 {
 			margin-top: 15px;
-			font-size: 24px;
+			font-size: var(--fs-bg);
 			font-weight: 400;
 			z-index: 1;
 			animation-name: appear;
@@ -43,9 +37,7 @@
 		align-items: center;
 		margin-right: 50px;
 
-		@include themify($themes) {
-			border-color: themed("lineColor");
-		}
+		border-color: var(--colors-line);
 
 		img {
 			border-radius: 200px;
@@ -89,9 +81,7 @@
 
 	margin-left: 50px;
 
-	@include themify($themes) {
-		color: themed("backgroundText");
-	}
+	color: var(--colors-bg-text);
 }
 
 @media (max-width: 720px) {

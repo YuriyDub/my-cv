@@ -1,0 +1,48 @@
+.projectsPage {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 200px;
+	padding-bottom: 100px;
+
+	color: var(--colors-text);
+
+	.projects {
+		display: grid;
+		margin: 0 50px;
+		border-color: var(--colors-line);
+
+		@media (max-width: 1024px) {
+			display: flex;
+			flex-direction: column;
+		}
+
+		@media (max-width: 767px) {
+			margin: 0 20px;
+		}
+	}
+	@media (max-width: 767px) {
+		padding-top: 100px;
+	}
+}
+
+.backgroundText {
+	margin-top: 50px;
+	font-size: 200px;
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--colors-bg-text);
+}
+
+@media (max-width: 900px) {
+	.backgroundText {
+		font-size: 100px;
+	}
+}
+
+@media (max-width: 767px) {
+	.backgroundText {
+		font-size: 60px;
+		margin-top: 30px;
+	}
+}

@@ -1,3 +1,5 @@
+@import-normalize;
+
 html,
 body,
 div,
@@ -182,10 +184,46 @@ button {
 
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 
+:root {
+	--fw-light: 300;
+	--fw-normal: 600;
+	--fw-bold: 800;
+
+	--fs-sm: 14px;
+	--fs-md: 18px;
+	--fs-bg: 24px;
+	--fs-hg: 48px;
+}
+
+body[data-theme="light"] {
+	--colors-header: #fff;
+	--colors-bg: #fff;
+	--colors-text: #000;
+	--colors-line: #00000025;
+	--colors-bg-text: #0001;
+	--colors-popup: #fff;
+	--colors-gradient: linear-gradient(0deg, rgb(0, 0, 0, 0.203) 0%, rgba(0, 0, 0, 0.043) 40%, rgba(0, 0, 0, 0) 100%);
+}
+
+body[data-theme="dark"] {
+	--colors-header: #000000;
+	--colors-bg: #282a3a;
+	--colors-text: #fff;
+	--colors-line: #a3aed296;
+	--colors-bg-text: #1c1b22;
+	--colors-popup: #404258;
+	--colors-gradient: linear-gradient(
+		0deg,
+		rgba(255, 255, 255, 0.203) 0%,
+		rgba(255, 255, 255, 0.043) 40%,
+		rgba(255, 255, 255, 0) 100%
+	);
+}
+
 body {
 	scroll-behavior: smooth;
 	vertical-align: baseline;
-	background-color: #000000;
+	background-color: var(--colors-bg);
 	font-family: "Space Grotesk", sans-serif;
 	overflow-x: hidden;
 	overflow-y: auto;

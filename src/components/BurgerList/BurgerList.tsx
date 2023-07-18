@@ -1,7 +1,7 @@
 import { useThemeContext } from '../../context/themeContext';
 import { NavButton } from '../UI/NavButton';
 import { Toggle } from '../UI/Toggle';
-import './index.scss';
+import styles from './BurgerList.module.scss';
 
 type BurgerListPropsType = {
   className: string;
@@ -21,12 +21,12 @@ const BurgerList = ({ className, callback }: BurgerListPropsType) => {
 
   return (
     <div className={className}>
-      <div className="popup-background" onClick={callback}>
+      <div className={styles.popupBackground} onClick={callback}>
         <div
-          className="popup"
+          className={styles.popup}
           onClick={(event: React.MouseEvent<HTMLElement>) => event.stopPropagation()}>
           <h1>Sections</h1>
-          <nav className="navigation">
+          <nav className={styles.navigation}>
             <NavButton to="/about" color="#22A699" callback={callback}>
               About
             </NavButton>
@@ -40,7 +40,7 @@ const BurgerList = ({ className, callback }: BurgerListPropsType) => {
               Experience
             </NavButton>
           </nav>
-          <h3 className="themeToggle">
+          <h3 className={styles.themeToggle}>
             theme:
             <Toggle onClick={changeTheme} onActive={theme === 'dark'} />
           </h3>

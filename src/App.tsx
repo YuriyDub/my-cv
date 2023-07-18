@@ -12,18 +12,16 @@ export default function App() {
 
   return (
     <div className={`theme-${theme}`}>
-      <div className="background">
-        <div className="wrapper">
-          <Routes>
-            <Route element={<Layout />}>
-              <Route path="/" element={<Navigate to="/about" />} />
-              <Route path="about" element={<AboutPage />} />
-              <Route path="stack" element={<StackPage />} />
-              <Route path="projects" element={<ProjectPage />} />
-              <Route path="links" />
-            </Route>
-          </Routes>
-        </div>
+      <div className="wrapper">
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path="/" element={<Navigate to="/about" />} />
+            <Route path="about" element={<AboutPage />} />
+            <Route path="stack" element={<StackPage />} />
+            <Route path="projects" element={<ProjectPage />} />
+            <Route path="links" />
+          </Route>
+        </Routes>
       </div>
     </div>
   );

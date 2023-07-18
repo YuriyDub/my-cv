@@ -1,13 +1,3 @@
-@import "./themes.scss";
-
-.background {
-	transition: all 0.2s ease-in-out;
-
-	@include themify($themes) {
-		background-color: themed("bodyColor");
-	}
-}
-
 .wrapper {
 	max-width: 1240px;
 	min-width: 300px;

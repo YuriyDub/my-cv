@@ -1,19 +1,13 @@
-@import "../../../styles/themes";
-
 .button {
 	font-weight: 500;
 	height: 50px;
 	transition: all 0.05s ease-out;
 
-	@include themify($themes) {
-		border-color: themed("headerColor");
-	}
+	border-color: var(--colors-line);
 
 	svg {
 		height: 18px;
-		@include themify($themes) {
-			fill: themed("textColor");
-		}
+		fill: var(--colors-text);
 	}
 
 	&:active {

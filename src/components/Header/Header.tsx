@@ -1,18 +1,21 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Button } from '../UI/Button';
 import { NavButton } from '../UI/NavButton';
 import { BurgerList } from '../BurgerList';
 import { useThemeContext } from '../../context/themeContext';
 import { Toggle } from '../UI/Toggle';
 
-import './index.scss';
+import styles from './Header.module.scss';
 
 const Header = () => {
   const [isBurger, setIsBurger] = useState(false);
 
   const { theme, setTheme } = useThemeContext();
 
-  localStorage.setItem('theme', theme);
+  useEffect(() => {
+    localStorage.setItem('theme', theme);
+    document.body.setAttribute('data-theme', theme);
+  }, [theme]);
 
   const changeTheme = () => {
     if (theme === 'light') {
@@ -20,13 +23,12 @@ const Header = () => {
     } else {
       setTheme('light');
     }
-    localStorage.setItem('theme', theme);
   };
 
   return (
     <>
-      <div className="header">
-        <Button onClick={() => setIsBurger((b) => !b)} className="burger">
+      <div className={styles.header}>
+        <Button onClick={() => setIsBurger((b) => !b)} className={styles.burger}>
           <svg
             version="1.1"
             id="Layer_1_1_"
@@ -40,7 +42,7 @@ const Header = () => {
           </svg>
         </Button>
         <h2>Yuriy Dub</h2>
-        <nav className="baseNavigation">
+        <nav className={styles.navigation}>
           <NavButton to="/about" color="#22A699">
             About
           </NavButton>
@@ -55,9 +57,11 @@ const Header = () => {
           </NavButton>
         </nav>
         <h3>yuriyyuriovich@gmail.com</h3>
-        <Toggle onClick={changeTheme} onActive={theme === 'dark'} className={'themeToggle'} />
+        <Toggle onClick={changeTheme} onActive={theme === 'dark'} className={styles.themeToggle} />
       </div>
-      {isBurger && <BurgerList className="burgerList" callback={() => setIsBurger((b) => !b)} />}
+      {isBurger && (
+        <BurgerList className={styles.burgerList} callback={() => setIsBurger((b) => !b)} />
+      )}
     </>
   );
 };
