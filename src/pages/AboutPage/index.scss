@@ -95,11 +95,9 @@
 
 @keyframes appear {
 	from {
-		overflow: hidden;
 		transform: translate(0px, 400px) scale(0.5);
 	}
 	to {
-		overflow: auto;
 		transform: translate(0px, 0px) scale(1);
 	}
 }
