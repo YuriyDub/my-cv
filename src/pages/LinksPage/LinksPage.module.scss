@@ -1,10 +1,13 @@
-.stack-page {
+.page {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	padding-top: 300px;
 	padding-bottom: 100px;
 
 	color: var(--colors-text);
 
-	.stack {
+	.links {
 		margin-left: 50px;
 		margin-right: 50px;
 		display: flex;
@@ -17,11 +20,13 @@
 
 		border-color: var(--colors-line);
 
-		.tool {
+		.link {
+			all: unset;
 			padding: 20px;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+			cursor: pointer;
 
 			img {
 				max-width: 40px;
@@ -41,46 +46,47 @@
 				background: var(--colors-bg);
 			}
 		}
-	}
-}
 
-@media (max-width: 1400px) {
-	.stack-page {
-		padding-top: 100px;
-		.stack {
+		@media (max-width: 1024px) {
+			display: flex;
 			flex-direction: column;
-			border-bottom: none;
+		}
 
-			.tool {
-				padding: 50px;	
-
-				img {
-					max-width: 100px;
-					max-height: 100px;
-					margin-bottom: 20px;
-				}
-				span {
-					font-size: 24px;
-				}
-
-				&:hover {
-					transform: translateY(-20px) scale(1.2);
-				}
-			}
+		@media (max-width: 767px) {
+			margin: 0 20px;
 		}
 	}
+	@media (max-width: 767px) {
+		padding-top: 100px;
+	}
 }
 
-.background-text {
-	margin: 0px;
+.backgroundText {
+	margin-top: 50px;
 	font-size: 200px;
 	text-align: center;
 	text-transform: uppercase;
 	color: var(--colors-bg-text);
 }
 
-@media (max-width: 720px) {
-	.background-text {
+@media (max-width: 900px) {
+	.backgroundText {
 		font-size: 100px;
+	}
+}
+
+@media (max-width: 767px) {
+	.backgroundText {
+		font-size: 60px;
+		margin-top: 30px;
+	}
+}
+
+@keyframes appear {
+	from {
+		transform: translate(0px, 400px) scale(0.5);
+	}
+	to {
+		transform: translate(0px, 0px) scale(1);
 	}
 }

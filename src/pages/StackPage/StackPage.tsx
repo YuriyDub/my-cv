@@ -25,6 +25,20 @@ const StackPage = () => {
           <span>React Router v6</span>
         </div>
         <div className="tool">
+          <img
+            src="https://react-hook-form.com/images/logo/react-hook-form-logo-only.png"
+            alt="tool"
+          />
+          <span>React-hook-form</span>
+        </div>
+        <div className="tool">
+          <img
+            src="https://i0.wp.com/watermargin.net/wp-content/uploads/2022/05/mui-logo.png?fit=820%2C820&ssl=1"
+            alt="tool"
+          />
+          <span>Material UI</span>
+        </div>
+        <div className="tool">
           <img src="https://avatars.githubusercontent.com/u/20658825?s=200&v=4" alt="tool" />
           <span>Styled-component</span>
         </div>

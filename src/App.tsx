@@ -6,6 +6,7 @@ import { StackPage } from './pages/StackPage';
 import { ProjectPage } from './pages/ProjectsPage';
 
 import './styles/App.scss';
+import { LinksPage } from './pages/LinksPage';
 
 export default function App() {
   const { theme } = useThemeContext();
@@ -19,7 +20,7 @@ export default function App() {
             <Route path="about" element={<AboutPage />} />
             <Route path="stack" element={<StackPage />} />
             <Route path="projects" element={<ProjectPage />} />
-            <Route path="links" />
+            <Route path="links" element={<LinksPage />} />
           </Route>
         </Routes>
       </div>
