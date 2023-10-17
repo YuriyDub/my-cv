@@ -5,7 +5,7 @@ export const LinksPage = () => {
     <div className={styles.page}>
       <div className={styles.links}>
         <a href="https://github.com/YuriyDub" className={styles.link}>
-          <img src="https://assets.stickpng.com/images/5847f98fcef1014c0b5e48c0.png" alt="link" />
+          <img src="img/icons/5847f98fcef1014c0b5e48c0.png" alt="link" />
           <span>Github</span>
         </a>
         <a href="https://www.linkedin.com/in/yuriy-dub-160241218/" className={styles.link}>
