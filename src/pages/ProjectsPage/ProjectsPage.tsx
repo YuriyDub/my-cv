@@ -4,6 +4,7 @@ import styles from './ProjectsPage.module.scss';
 export const ProjectPage = () => {
   return (
     <div className={styles.projectsPage}>
+      <h3 className={styles.backgroundText}>projects</h3>
       <div className={styles.projects}>
         <ProjectItem
           image="./img/photo_2023-07-15_02-28-27.jpg"
@@ -43,7 +44,7 @@ export const ProjectPage = () => {
         />
         <ProjectItem
           image="./img/photo_2023-10-12_15-07-02.jpg"
-          url="https://typer-speed.vercel.app/"
+          url="https://rating-comparer.vercel.app/"
           title="RatingComparer App"
           description="Introducing Student Rating Comparator, the ultimate program designed to help you assess and compare your academic experience with your peers. Whether you're a current student looking to gauge your performance or an alum reflecting on your time at university, this program empowers you to input your ratings and criteria to generate a personalized academic rating."
           stack={[
@@ -62,7 +63,6 @@ export const ProjectPage = () => {
           ]}
         />
       </div>
-      <h3 className={styles.backgroundText}>projects</h3>
     </div>
   );
 };

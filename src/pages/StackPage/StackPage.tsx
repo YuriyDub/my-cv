@@ -3,6 +3,7 @@ import './index.scss';
 const StackPage = () => {
   return (
     <div className="stack-page">
+      <h3 className="background-text">Stack</h3>
       <div className="stack">
         <div className="tool">
           <img src="./img/icons/4373213_js_logo_logos_icon.svg" alt="tool" />
@@ -50,7 +51,6 @@ const StackPage = () => {
           <span>Axios</span>
         </div>
       </div>
-      <h3 className="background-text">Stack</h3>
     </div>
   );
 };

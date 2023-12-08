@@ -36,8 +36,8 @@ const BurgerList = ({ className, callback }: BurgerListPropsType) => {
             <NavButton to="/projects" color="#F29727" callback={callback}>
               Projects
             </NavButton>
-            <NavButton to="/experience" color="#F24C3D" callback={callback}>
-              Experience
+            <NavButton to="/links" color="#F24C3D" callback={callback}>
+              Links
             </NavButton>
           </nav>
           <h3 className={styles.themeToggle}>
